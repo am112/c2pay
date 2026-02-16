@@ -5,7 +5,7 @@ namespace Am112\C2pay\Services;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
-final readonly class C2payJwt
+final class C2payJwt
 {
     public function __construct(
         private string $key,

@@ -12,8 +12,8 @@ class PaymentTokenizationRequestData extends PaymentTokenRequestData
         string $currencyCode,
         array $paymentChannel = ['CC'],
         string $userDefined1 = '',
-        public readonly bool $tokenize = true,
-        public readonly string $request3DS = 'N',
+        public bool $tokenize = true,
+        public string $request3DS = 'N',
     ) {
         parent::__construct(
             invoiceNo: $invoiceNo,
