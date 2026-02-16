@@ -7,21 +7,21 @@ use Am112\C2pay\Concerns\HasHasher;
 use Am112\C2pay\Exceptions\C2payInvalidResponseException;
 use InvalidArgumentException;
 
-class C2payApi
+final class C2payApi
 {
     use HasHasher;
 
     private string $domain;
 
-    private readonly string $apiKey;
+    private string $apiKey;
 
-    private readonly string $merchantId;
+    private string $merchantId;
 
-    private readonly string $encryptionMethod;
+    private string $encryptionMethod;
 
-    private readonly C2payClient $client;
+    private C2payClient $client;
 
-    private readonly C2payJwt $jwt;
+    private C2payJwt $jwt;
 
     public function __construct()
     {
